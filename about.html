@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Adan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">A</span>Adan
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="page-header">
+          <h1>About me</h1>
+          <p>A bit about how I work, and a way to get in touch.</p>
+        </div>
+      </div>
+
+      <section class="about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text">
+              <img
+                src="avatar.webp"
+                alt="Portrait of Adan, a full-stack developer"
+                class="about-avatar"
+                width="144"
+                height="144"
+              />
+              <h2>Who I am</h2>
+              <p>
+                I'm Dion Ran S. Adan — most people just call me Adan. I'm a
+                Computer Science student at Ateneo de Davao University,
+                splitting my time between coursework and building small web
+                projects like this one.
+              </p>
+              <p>
+                Outside of class, I'm usually deep in a game, League of
+                Legends especially. There's something about drafting a
+                strategy, adjusting mid-fight, and grinding to climb that
+                scratches the same itch as debugging: test something, see
+                what breaks, try again.
+              </p>
+
+              <h2 style="margin-top: 2.5rem;">Skills</h2>
+              <ul class="skills-list">
+                <li><i class="fa-brands fa-html5"></i> Semantic HTML5</li>
+                <li>
+                  <i class="fa-brands fa-css3-alt"></i> Modern CSS
+                  (Grid/Flexbox)
+                </li>
+                <li><i class="fa-brands fa-js"></i> ES6+ JavaScript</li>
+                <li><i class="fa-brands fa-git-alt"></i> API Integration</li>
+              </ul>
+            </div>
+
+            <div class="contact-column">
+              <h2>Contact me</h2>
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="fullName"
+                    >Full name <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fullName"
+                    autocomplete="name"
+                    placeholder="Juan dela Cruz"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone"
+                    >PH phone number <span class="required">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="09xxxxxxxxx or +639xxxxxxxxx"
+                    required
+                  />
+                  <small class="error-text" id="phoneError"
+                    >Please enter a valid PH mobile number.</small
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Send message
+                </button>
+                <div id="formError" class="error-message hidden" role="alert">
+                  Please provide a valid full name and Philippine mobile
+                  number.
+                </div>
+                <div id="formSuccess" class="success-message hidden">
+                  Thanks! Your message is ready to be sent.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Adan. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

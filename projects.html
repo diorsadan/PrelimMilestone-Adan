@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Adan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">A</span>Adan
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="page-header">
+          <h1>Projects</h1>
+          <p>A live pull of my public repositories, searchable and bookmarkable.</p>
+        </div>
+      </div>
+
+      <section class="projects-section">
+        <div class="container">
+          <div class="projects-controls">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search projects by name..."
+              aria-label="Search projects"
+            />
+            <button id="showBookmarksBtn" class="btn btn-secondary">
+              <i class="fa-solid fa-bookmark"></i> Bookmarks
+            </button>
+          </div>
+
+          <div id="loadingSpinner" class="spinner hidden">
+            <i class="fa-solid fa-circle-notch fa-spin"></i> Fetching
+            repositories...
+          </div>
+
+          <div id="errorContainer" class="error-message hidden"></div>
+
+          <div id="projectGallery" class="gallery-grid">
+            <!-- Cards injected via JS DOM Manipulation -->
+          </div>
+
+          <div class="pagination-controls hidden" id="paginationControls">
+            <button id="prevPage" class="btn btn-secondary">
+              <i class="fa-solid fa-chevron-left"></i> Prev
+            </button>
+            <span id="pageInfo">Page 1 of X</span>
+            <button id="nextPage" class="btn btn-secondary">
+              Next <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Adan. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="projects.js"></script>
+  </body>
+</html>
