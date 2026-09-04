@@ -359,8 +359,17 @@ img {
   width: 9rem;
   height: 9rem;
   object-fit: cover;
-  border-radius: var(--radius-md);
+  border-radius: 50%;
   border: 1px solid var(--border);
+  margin-bottom: var(--space-md);
+}
+
+.hero-avatar {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
   margin-bottom: var(--space-md);
 }
 
